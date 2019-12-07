@@ -2,7 +2,7 @@ import socket
 import time
 import select
 
-IP = ''
+IP = 'localhost'
 PORT = 8216
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -18,8 +18,7 @@ clients = {}
 
 
 while True:
-    read_socket, write_socket, exception_socket = select.select(
-        socket_list, [], socket_list)
+    read_socket, write_socket, exception_socket = select.select(socket_list, [], socket_list)
     for s in read_socket:
         if s == server_socket:
             client_socket, address = server_socket.accept()

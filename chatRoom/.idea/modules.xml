@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/PycharmProjects/Mapsa_s2/.idea/Mapsa_s2.iml" filepath="$USER_HOME$/PycharmProjects/Mapsa_s2/.idea/Mapsa_s2.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/Mapsa_s4/.idea/Mapsa_s4.iml" filepath="$USER_HOME$/PycharmProjects/Mapsa_s4/.idea/Mapsa_s4.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/chatRoom.iml" filepath="$PROJECT_DIR$/.idea/chatRoom.iml" />
     </modules>
   </component>

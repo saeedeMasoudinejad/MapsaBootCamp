@@ -13,3 +13,4 @@ while True:
     msg = input('-> ')
     client_socket.send(bytes(msg, 'utf-8'))
     time.sleep(5)
+#print("test")
