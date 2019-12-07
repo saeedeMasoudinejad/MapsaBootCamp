@@ -2,14 +2,17 @@ import socket
 import time
 import select
 
+
 IP = 'localhost'
 PORT = 8216
+
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 server_socket.bind((IP, PORT))
 
 server_socket.listen(10)
+print(server_socket)
 print("server up!")
 
 socket_list = [server_socket]
@@ -18,7 +21,9 @@ clients = {}
 
 
 while True:
+
     read_socket, write_socket, exception_socket = select.select(socket_list, [], socket_list)
+
     for s in read_socket:
         if s == server_socket:
             client_socket, address = server_socket.accept()
@@ -47,5 +52,5 @@ while True:
     for s in exception_socket:
         socket_list.remove(s)
         del clients[s]
-    # print(socket_list)
+    print("socket list \n", socket_list)
 # server_socket.close()

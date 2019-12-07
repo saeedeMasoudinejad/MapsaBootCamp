@@ -4,7 +4,7 @@ import sys
 import threading
 
 IP = 'localhost'
-PORT = 8216
+PORT = 8217
 username = input("Enter your name: ")
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect((IP, PORT))
@@ -20,6 +20,9 @@ def send_message():
 
 t1 = threading.Thread(target=send_message)
 t1.start()
+
+# t2 = threading.Thread(target=hello)
+# t2.start()
 
 
 while True:
