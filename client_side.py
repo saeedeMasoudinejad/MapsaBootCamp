@@ -10,9 +10,11 @@ client_socket.connect((IP, port))
 def send_mes():
     while True:
         mes = input()
-        if mes:
-            client_socket.send(bytes(mes, 'utf8'))
-
+        try:
+            if mes:
+                client_socket.send(bytes(mes, 'utf8'))
+        except IOError:
+            pass
 
 t1 = Thread(target=send_mes)
 t1.start()
